@@ -1,355 +1,870 @@
-*, *::after, *::before {
-  box-sizing: border-box;
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
 }
 
 @font-face {
-  font-family: 'Banny Round';
-  font-style: normal;
-  font-weight: normal;
-  src: local('Banny Round'), url('../fonts/Banny-Round.woff') format('woff');
+    font-family: 'Banny Round';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Banny Round'), url('../fonts/Banny-Round.woff') format('woff');
 }
 
 @font-face {
-  font-family: 'Banny Light Round';
-  font-style: normal;
-  font-weight: normal;
-  src: local('Banny Light Round'), url('../fonts/Banny-LightRound.woff') format('woff');
+    font-family: 'Banny Light Round';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Banny Light Round'), url('../fonts/Banny-LightRound.woff') format('woff');
 }
 
 @font-face {
-  font-family: 'Banny Bold Round';
-  font-style: normal;
-  font-weight: normal;
-  src: local('Banny Bold Round'), url('../fonts/Banny-BoldRound.woff') format('woff');
+    font-family: 'Banny Bold Round';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Banny Bold Round'), url('../fonts/Banny-BoldRound.woff') format('woff');
 }
 
-html, body {
-  padding: 0;
-  margin: 0;
+html,
+body {
+    padding: 0;
+    margin: 0;
 }
 
 body {
-  font-family: Open Sans, sans-serif;
-  width: 100%;
-  height: 100vh;
-  overflow-y: auto;
-  display: flex;
-  flex-direction: column;
+    font-family: Open Sans, sans-serif;
+    width: 100%;
+    height: 100vh;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
 }
-
-h1 {
-  font-family: 'Banny Bold Round';
-  font-size: 96px;
-  line-height: 0px;
-  color: white;
-  text-align: center;
-  position: absolute;
-  margin: 0;
-  top: 340px;
-  bottom: 0;
-  left: 0;
-  right: 0;
-}
-
-span{
-  position: absolute;
-  display: block;
-  font-family: Open Sans;
-  font-weight: bold;
-  font-size: 12px;
-  line-height: 14px;
-  letter-spacing: 0.5em;
-  text-align: center;
-  color: #FFFFFF;
-  margin: 0;
-  top: 226px;
-  bottom: 0;
-  left: 0;
-  right: 0;
-}
+/* 
+li{
+    list-style-type: none;
+} */
 
 a {
-  text-decoration: none;
+    text-decoration: none;
 }
 
 .nav {
-  height: 100px;
+    height: 100px;
 }
 
 .menu-list {
-  margin: 0;
-  padding: 0;
-  display: flex;
-  justify-content: center;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
 }
 
 .menu-list li {
-  display: inline-block;
-  width: 133px;
-  height: 100px;
-  margin: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+    display: inline-block;
+    width: 133px;
+    height: 100px;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .menu-item a {
-  color: white;
-  font-family: Open Sans;
-  font-size: 12px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 18px;
-  letter-spacing: 0em;
-  text-align: center;
+    color: white;
+    font-family: Open Sans;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 1.5;
+    text-align: center;
 }
 
 .menu-item a:hover {
-  font-size: 16px;
-  transition: .2s;
+    font-size: 14px;
+    transition: .2s;
 }
 
 .menu-item a:not(:hover) {
-  transition: .8s;
+    transition: .8s;
 }
 
 .header {
-  /* display: flex; */
-  position: relative;
-  background-image: url(../img/header-bg.jpg);
-  height: 100vh;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+
+    background-image: url(../img/header-bg.jpg);
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
 
 .header-container {
-  height: 100vh;
+    height: 100vh;
 }
 
 .header::before {
-  content: "";
-  width: 150px;
-  height: 150px;
-  background: url("../img/Vector.png") center center no-repeat;
-  display: block;
-  position: absolute;
-  top: 25px;
-  left: 50%;
-  margin-left: -75px;
+    content: "";
+    width: 150px;
+    height: 150px;
+    background: url("../img/Vector.png") center center no-repeat;
+    display: block;
+    position: absolute;
+    top: 25px;
+    left: 50%;
+    margin-left: -75px;
+}
+
+.header__maincontent--title {
+    height: 250px;
+    margin-top: 260px;
+}
+
+.hungry-title {
+    position: relative;
+    height: 135px;
+    font-family: 'Banny Bold Round';
+    font-size: 96px;
+    line-height: 1;
+    color: white;
+    text-align: center;
+    margin: 0;
+}
+
+.hungry-title::after {
+    content: '';
+    position: absolute;
+    width: 60px;
+    height: 5.11px;
+    border-radius: 5px;
+    background: #E8C300;
+    margin: auto;
+    top: 100px;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+.restaurant-span{
+    display: block;
+    font-family: Open Sans;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.5em;
+    text-align: center;
+    color: #fff;
+    margin-bottom: 35px;
 }
 
 .header__maincontent--time {
-  position: absolute;
-  display: flex;
-  justify-content: center;
-  top: 100px;
-  bottom: 0;
-  color: white;
-  font-family: Open Sans;
-  font-size: 12px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 12px;
-  letter-spacing: 0em;
-  padding-right: 81px;
-  writing-mode: vertical-lr;
-  -webkit-transform: rotate(180deg);
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    top: 100px;
+    bottom: 0;
+    color: white;
+    font-family: Open Sans;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 12px;
+    padding-right: 81px;
+    writing-mode: vertical-lr;
+    -webkit-transform: rotate(180deg);
 }
 
 .header__maincontent--social {
-  position: absolute;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  top: 100px;
-  bottom: 0;
-  right: 79px;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    top: 100px;
+    bottom: 0;
+    right: 79px;
 
 }
 
 .header__maincontent--social a {
-  padding-bottom: 20px;
-  /* padding-right: 79px; */
+    padding-bottom: 20px;
+
 }
 
 .header__maincontent--social a:hover {
-  transform: scale(1.2);
-  transition: .2s;
+    transform: scale(1.1);
+    transition: .2s;
 }
 
 .header__maincontent--social a:not(:hover) {
-  transition: .8s;
+    transition: .8s;
 }
 
 a.button-social-btn__link--last {
-  padding-bottom: 0;
+    padding-bottom: 0;
 }
 
 .button-social-btn__img {
-  border-radius: 50%;
-}
-
-.hungry::after {
-  content: '';
-  position: absolute;
-  background-image: url('../img/Rectangle.svg');
-  width: 60px;
-  height: 5.11px;
-  border-radius: 50px;
-  background: #E8C300;
-  margin: auto;
-  top: 140px;
-  left: 0;
-  bottom: 0;
-  right: 0;
+    border-radius: 50%;
 }
 
 .header-buttons {
-  display: flex;
-  position: absolute;
-  left: 0;
-  bottom: 120px;
-  right: 0;
-  justify-content: center;
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
 }
 
 .header-btn {
-  min-width: 200px;
-  min-height: 60px;
-  border-radius: 5px;
-  font-family: Open Sans;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 12px;
-  line-height: 20px;
-  cursor: pointer;
+    min-width: 200px;
+    min-height: 60px;
+    border-radius: 5px;
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 20px;
+    cursor: pointer;
 }
 
-.header-btn:focus{
+.header-btn:focus {
     outline: none !important
 }
 
 .header-btn:hover {
-  transform: scale(1.05);
-  transition: .2s;
+    transform: scale(1.05);
+    transition: .2s;
 }
 
 .header-btn:not(:hover) {
-  transition: .8s;
+    transition: .8s;
 }
 
 .header-btn__yellow {
-  background: #E8C300;
-  border: 1px solid #E8C300;
-  margin-right: 20px;
-  
+    background: #E8C300;
+    border: 1px solid #E8C300;
+    margin-right: 20px;
 }
 
 .header-btn__transparent {
-  background: transparent;
-  border: 1px solid rgba(255, 255, 255, 0.5);
-  margin-left: 20px;
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    margin-left: 20px;
 }
 
-.header-btn__link{
-  color: #FFFFFF;
+.header-btn__link {
+    color: #FFFFFF;
 }
 
-.scroll-down-btn{
-  position: absolute;
-  background-color: transparent;
-  border-radius: 50%;
-  border: none;
-  width: 62px;
-  height: 62px;
-  cursor: pointer;
-  margin: auto;
-  left: 0;
-  right: 0; 
-  bottom: 10px;
+.scroll-down-btn {
+    position: absolute;
+    background-color: transparent;
+    border-radius: 50%;
+    border: none;
+    width: 62px;
+    height: 62px;
+    cursor: pointer;
+    margin: auto;
+    left: 0;
+    right: 0;
+    bottom: 83px;
 }
 
 .scroll-down-btn:hover {
-  transform: scale(1.2);
-  transition: .2s;
+    transform: scale(1.1);
+    transition: .2s;
 }
 
 .scroll-down-btn:not(:hover) {
-  transition: .8s;
+    transition: .8s;
 }
+
 
 /* -----------------------___HEADER END___---------------------------- */
 
+
 /* ----------------------___ SECTON ABOUT START___--------------------- */
 
-/* Positioning */
-.about{
-    /* position: relative; */
-} 
-
-.about-container{
- display: grid;
- grid-template-columns: 50% 50% ;
- grid-template-rows: 620px;
- justify-items: center;
- align-items: center;
+.about-container {
+    display: flex;
+    align-self: center;
+    min-height: 675px;
 }
 
-.about-common-class{
-  /* grid-row-start: auto;
-  grid-row-end: auto;
-  grid-column-start: auto;
-  grid-column-end: auto; */
-  text-align: center;
+.about__content {
+    width: 50%;
+    position: relative;
 }
 
-.about__content-common-class{
- 
+.about__content-container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    text-align: center;
+    min-width: 580px;
 }
 
-.about__content{
-  /* background-color: aquamarine; */
-  
-}
-
-.about__photo{
-  background-color: coral;
-  
-}
-
-.about-img{
-  width: auto;
-}
-
-/* Items style */
-
-.about__content-common-class {
-}
 .about__content-title {
-  font-family: 'Banny Bold Round';
-  font-size: 36px;
-  line-height: 48px;
-  /* text-align: center; */
-  color: #000000;
-  position: relative;
+    position: relative;
+
+    display: block;
+    font-family: 'Banny Bold Round';
+    font-size: 36px;
+    line-height: 1.33;   
+    text-transform: uppercase;
+    color: #000000;
+    margin: 0 0 45px 0;
 }
 
 .about__content-title::after{
-  content: '';
-  position: absolute;
-  background-image: url('../img/Rectangle.svg');
-  width: 60px;
-  height: 5.11px;
-  border-radius: 50px;
-  background: #E8C300;
-  margin: auto;
-  top: 140px;
-  left: 0;
-  bottom: 0;
-  right: 0;
+    content: '';
+    position: absolute;
+    width: 60px;
+    height: 5.11px;
+    border-radius: 5px;
+    background: #E8C300;
+    margin: auto;
+    top: 90px;
+    left: 0;
+    bottom: 0;
+    right: 0;
 }
+
 .about__content-text-bold {
+    font-family: Open Sans;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 1.55;
+}
+
+.about__content-text-bold p{
+    margin: 0 0 30px 0;
 }
 .about__content-text-normal {
+    font-family: Open Sans;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.71;
+}
+.about__photo {
+    width: 50%;
+    text-align: center;
+    position: relative;
+}
+.about-img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* ----------------------___ SECTON OUR TEAM START___--------------------- */
+
+.our-team{
+    background-image: url("../img/specialty-bg.jpg");
+    height: 100vh;
+    background-repeat: no-repeat;
+    /* background-position: center; */
+    background-size: cover;
+    position: relative;
+}
+
+.our-team__head{
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 1.17;
+
+    letter-spacing: 0.5em;
+    color: #FFFFFF;
+    margin: 0 auto;
+}
+
+.our-team-container {
+    display: flex;
+    align-self: center;
+    min-height: 675px;
+}
+
+.our-team__content {
+    width: 50%;
+    position: relative;
+}
+
+.our-team__content-container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    text-align: center;
+    min-width: 580px;
+
+    color: #FFFFFF;
+}
+
+.our-team__content-title {
+    display: block;
+    font-family: 'Banny Bold Round';
+    font-size: 36px;
+    line-height: 1.33;   
+    text-transform: uppercase;
+    margin: 0 0 45px 0;
+
+    position: relative;
+}
+
+.our-team__content-title::after{
+    content: '';
+    position: absolute;
+    width: 60px;
+    height: 5.11px;
+    border-radius: 5px;
+    background: #E8C300;
+    margin: auto;
+    top: 90px;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+.our-team__content-text-bold {
+    font-family: Open Sans;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 1.55;
+    
+}
+
+.our-team__content-text-bold p{
+    margin: 0 0 30px 0;
+}
+.our-team__content-text-normal {
+    font-family: Open Sans;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.71;
+}
+.our-team__photo {
+    width: 50%;
+    text-align: center;
+    position: relative;
+}
+.our-team-img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* ----------------------___ SECTON BOOKING START___--------------------- */
+
+.booking-container {
+    display: flex;
+    min-height: 675px;
+    position: relative;
+}
+
+.booking__content-title {
+    position: relative;
+
+    display: block;
+    font-family: 'Banny Bold Round';
+    font-size: 36px;
+    line-height: 1.33;   
+    text-transform: uppercase;
+    color: #000000;
+    margin: 0 0 45px 0;
+}
+
+.booking__content-title::after{
+    content: '';
+    position: absolute;
+    width: 60px;
+    height: 5.11px;
+    border-radius: 5px;
+    background: #E8C300;
+    margin: auto;
+    top: 90px;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+.booking__content {
+    width: 50%;
+    position: relative;
+}
+
+.booking__content-wrapper{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    text-align: center;
+    min-width: 580px;
+}
+
+.booking__content-title {
+    position: relative;
+
+    display: block;
+    font-family: 'Banny Bold Round';
+    font-size: 36px;
+    line-height: 1.33;   
+    text-transform: uppercase;
+    color: #000000;
+    margin: 0 0 45px 0;
+}
+
+.main-form{
+    display: flex;
+    justify-content: center;
+}
+
+.form__input{
+    width: 278px;
+    height: 60px;
+    margin: 5px;
+    background: #E5E5E5;
+    border-radius: 5px;
+    border: none;
+
+    font-size: 14px;
+    line-height: 1.36;
+    /* text-indent: 20px; */
+    padding: 0 20px;
+    color: rgba(51, 51, 51, 0.5);
+}
+
+.confirm-button-btn{
+    width: 566px;
+    height: 60px;
+    border-radius: 5px;
+    border: none;
+    background: #E8C300;
+    margin-top: 5px;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 1.67;
+    color: #FFFFFF;
+    text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+
+}
+
+.confirm-button-btn:focus {
+    outline: none !important
+}
+
+.confirm-button-btn:hover {
+    transform: scale(1.005);
+    transition: .2s;
+}
+
+.confirm-button-btn:not(:hover) {
+    transition: .8s;
+}
+
+.confirm-button{
+    text-align: center;
+}
+
+.booking__photo {
+    width: 50%;
+    text-align: center;
+    position: relative;
+}
+.booking-img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.schedule{
+    position: absolute;
+    bottom: 36px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    font-family: Open Sans;
+    font-size: 12px;
+    line-height: 12px; 
+    color: rgba(51, 51, 51, 0.5);
+    border-radius: 5px;
+}
+
+/* ----------------------___ SECTOIN SPECIALTIES START___--------------------- */
+
+.specialties{
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url("../img/specialties-bg.jpg");
+    position: relative;
+}
+
+.specialties__head{
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 1.17;
+
+    letter-spacing: 0.5em;
+    color: #FFFFFF;
+    margin: 0 auto;
+}
+
+.specialties-container {
+    display: flex;
+    align-self: center;
+    min-height: 675px;
+}
+
+.specialties__content {
+    width: 50%;
+    position: relative;
+}
+
+.specialties__content-container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    text-align: center;
+    min-width: 580px;
+
+    color: #FFFFFF;
+}
+
+.specialties__content-title {
+    display: block;
+    font-family: 'Banny Bold Round';
+    font-size: 36px;
+    line-height: 1.33;   
+    text-transform: uppercase;
+    margin: 0 0 45px 0;
+
+    position: relative;
+}
+
+.specialties__content-title::after{
+    content: '';
+    position: absolute;
+    width: 60px;
+    height: 5.11px;
+    border-radius: 5px;
+    background: #E8C300;
+    margin: auto;
+    top: 90px;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+.specialties__content-text-bold {
+    font-family: Open Sans;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 1.55;
+    
+}
+
+.specialties__content-text-bold p{
+    margin: 0 0 30px 0;
+}
+.specialties__content-text-normal {
+    font-family: Open Sans;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.71;
+}
+.specialties__photo {
+    width: 50%;
+    text-align: center;
+    position: relative;
+}
+.specialties-img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* ----------------------___ SLIDER FOR SPECIALTIES___--------------------- */
+
+.slider__item{
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+/* ----------------------___ SECTON MENU START___--------------------- */
+
+.rest-menu{
+   position: relative;
+}
+
+.menu-container {
+}
+
+.rest-menu__description{
+    text-align: center;
+    min-width: 580px;
+
+    color: #000;
+}
+
+.rest-menu__description-common {
+    width: 550px;
+    font-family: Open Sans;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 1.55;
+    margin: 0 auto;
+    margin-top: 100px;
+    
+}
+
+.rest-menu__description-title {
+    display: block;
+    font-family: 'Banny Bold Round';
+    font-size: 36px;
+    line-height: 1.33;   
+    text-transform: uppercase;
+    margin: 0 0 45px 0;
+
+    position: relative;
+}
+
+.rest-menu__description-title::after{
+    content: '';
+    position: absolute;
+    width: 60px;
+    height: 5.11px;
+    border-radius: 5px;
+    background: #E8C300;
+    margin: auto;
+    top: 90px;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+.rest-menu__nav {
+    text-align: center;
+    margin: 50px 0;
+}
+
+.rest-menu__nav ul {
+    list-style: none;
+}
+
+.rest-menu__nav-list{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.rest-menu__nav-list li{
+
+    position: relative;
+    width: 120px;
+    height: 50px;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    font-family: Open Sans;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 1.5;
+    color: #333333;
+    
+}
+
+.rest-menu__nav-item a:hover {
+    font-size: 13px;
+    transition: .2s;
+}
+
+.rest-menu__nav-item a:not(:hover) {
+    transition: .8s;
+}
+
+.rest-menu__nav-list li + li::after{
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 0px;
+    left: -24px;
+    border: 1px solid rgba(51, 51, 51, 0.2);
+    transform: rotate(90deg);
+}
+
+.rest-menu__list-container {
+    display: flex;
+    align-self: center;
+    /* min-height: 675px; */
+}
+.rest-menu__list-container-col {
+    width: 33.33%;
+    position: relative;
+
+    font-family: 'Banny Bold Round';
+    font-size: 18px;
+    line-height: 1;
+    color: #333333;  
+}
+
+.rest-menu-wrapper{
+    margin-bottom: 38px;
+}
+
+.col_1{
+    /* background-color: aqua; */
+}
+
+.col_2{
+    /* background-color: bisque; */
+}
+
+.col_3{
+    /* background-color: coral; */
+}
+
+.rest-menu__item-cont{
+    display: flex;
+    /* background-color: crimson; */
+    padding-left: 20%;
+}
+
+.rest-menu__item-price{
+    margin-left: 30px;
+    /* background-color: cornflowerblue; */
+}
+
+.rest-menu__item-description{
+    font-family: Open Sans;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.29;
+    color: rgba(67, 62, 62, 0.7);
+    padding-left: 20%;
 }
