@@ -1,6 +1,4 @@
-*,
-*::after,
-*::before {
+*, *::after, *::before {
     box-sizing: border-box;
 }
 
@@ -25,8 +23,7 @@
     src: local('Banny Bold Round'), url('../fonts/Banny-BoldRound.woff') format('woff');
 }
 
-html,
-body {
+html, body {
     padding: 0;
     margin: 0;
 }
@@ -39,10 +36,6 @@ body {
     display: flex;
     flex-direction: column;
 }
-/* 
-li{
-    list-style-type: none;
-} */
 
 a {
     text-decoration: none;
@@ -59,8 +52,7 @@ a {
     justify-content: center;
 }
 
-.menu-list li {
-    display: inline-block;
+.menu-item {
     width: 133px;
     height: 100px;
     margin: 0;
@@ -73,7 +65,6 @@ a {
     color: white;
     font-family: Open Sans;
     font-size: 12px;
-    font-style: normal;
     font-weight: 700;
     line-height: 1.5;
     text-align: center;
@@ -89,8 +80,7 @@ a {
 }
 
 .header {
-
-    background-image: url(../img/header-bg.jpg);
+    background-image: url("../img/1_header-bg.jpg");
     height: 100vh;
     background-repeat: no-repeat;
     background-position: center;
@@ -105,12 +95,12 @@ a {
     content: "";
     width: 150px;
     height: 150px;
-    background: url("../img/Vector.png") center center no-repeat;
+    background: url("../img/1.1_Vector.png") center center no-repeat;
     display: block;
     position: absolute;
     top: 25px;
     left: 50%;
-    margin-left: -75px;
+    transform: translate(-50%);
 }
 
 .header__maincontent--title {
@@ -143,7 +133,7 @@ a {
     right: 0;
 }
 
-.restaurant-span{
+.restaurant-span {
     display: block;
     font-family: Open Sans;
     font-weight: bold;
@@ -180,12 +170,10 @@ a {
     top: 100px;
     bottom: 0;
     right: 79px;
-
 }
 
-.header__maincontent--social a {
-    padding-bottom: 20px;
-
+.header__maincontent--social a+a {
+    padding-top: 20px;
 }
 
 .header__maincontent--social a:hover {
@@ -195,10 +183,6 @@ a {
 
 .header__maincontent--social a:not(:hover) {
     transition: .8s;
-}
-
-a.button-social-btn__link--last {
-    padding-bottom: 0;
 }
 
 .button-social-btn__img {
@@ -275,46 +259,49 @@ a.button-social-btn__link--last {
     transition: .8s;
 }
 
-
 /* -----------------------___HEADER END___---------------------------- */
 
+/* ----------------------___ COMMON STILES___--------------------- */
 
-/* ----------------------___ SECTON ABOUT START___--------------------- */
+.section-bg {
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
 
-.about-container {
+.section-container {
     display: flex;
     align-self: center;
     min-height: 675px;
 }
 
-.about__content {
+.section__content {
     width: 50%;
     position: relative;
 }
 
-.about__content-container{
+.section__content-container {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-
     text-align: center;
     min-width: 580px;
 }
 
-.about__content-title {
+.section-title {
     position: relative;
-
     display: block;
     font-family: 'Banny Bold Round';
     font-size: 36px;
-    line-height: 1.33;   
+    line-height: 1.33;
     text-transform: uppercase;
     color: #000000;
     margin: 0 0 45px 0;
 }
 
-.about__content-title::after{
+.section-title::after {
     content: '';
     position: absolute;
     width: 60px;
@@ -328,221 +315,108 @@ a.button-social-btn__link--last {
     right: 0;
 }
 
-.about__content-text-bold {
+.content-text-bold {
     font-family: Open Sans;
     font-weight: 700;
     font-size: 18px;
     line-height: 1.55;
 }
 
-.about__content-text-bold p{
+.content-text-bold p {
     margin: 0 0 30px 0;
 }
-.about__content-text-normal {
+
+.content-text-normal {
     font-family: Open Sans;
     font-weight: 400;
     font-size: 14px;
     line-height: 1.71;
 }
-.about__photo {
+
+.section__photo {
     width: 50%;
     text-align: center;
     position: relative;
 }
-.about-img {
+
+.section-img {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
 
-/* ----------------------___ SECTON OUR TEAM START___--------------------- */
-
-.our-team{
-    background-image: url("../img/specialty-bg.jpg");
-    height: 100vh;
-    background-repeat: no-repeat;
-    /* background-position: center; */
-    background-size: cover;
-    position: relative;
+.schedule {
+    position: absolute;
+    bottom: 36px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: Open Sans;
+    font-size: 12px;
+    line-height: 12px;
+    color: rgba(51, 51, 51, 0.5);
+    border-radius: 5px;
 }
 
-.our-team__head{
+/* ----------------------___ SECTON OUR TEAM START___--------------------- */
+
+.our-team {
+    background-image: url("../img/specialty-bg.jpg");
+}
+
+.section__head {
     position: absolute;
     top: 50px;
     left: 50%;
     transform: translate(-50%, -50%);
-    
     font-family: Open Sans;
     font-style: normal;
     font-weight: bold;
     font-size: 12px;
     line-height: 1.17;
-
     letter-spacing: 0.5em;
     color: #FFFFFF;
     margin: 0 auto;
 }
 
-.our-team-container {
-    display: flex;
-    align-self: center;
-    min-height: 675px;
-}
-
-.our-team__content {
-    width: 50%;
-    position: relative;
-}
-
-.our-team__content-container{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-
-    text-align: center;
-    min-width: 580px;
-
-    color: #FFFFFF;
-}
-
-.our-team__content-title {
-    display: block;
-    font-family: 'Banny Bold Round';
-    font-size: 36px;
-    line-height: 1.33;   
-    text-transform: uppercase;
-    margin: 0 0 45px 0;
-
-    position: relative;
-}
-
-.our-team__content-title::after{
-    content: '';
-    position: absolute;
-    width: 60px;
-    height: 5.11px;
-    border-radius: 5px;
-    background: #E8C300;
-    margin: auto;
-    top: 90px;
-    left: 0;
-    bottom: 0;
-    right: 0;
-}
-
-.our-team__content-text-bold {
-    font-family: Open Sans;
-    font-weight: 700;
-    font-size: 18px;
-    line-height: 1.55;
-    
-}
-
-.our-team__content-text-bold p{
-    margin: 0 0 30px 0;
-}
-.our-team__content-text-normal {
-    font-family: Open Sans;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 1.71;
-}
-.our-team__photo {
-    width: 50%;
-    text-align: center;
-    position: relative;
-}
-.our-team-img {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+.section-title-white {
+    color: #fff;
 }
 
 /* ----------------------___ SECTON BOOKING START___--------------------- */
 
-.booking-container {
-    display: flex;
-    min-height: 675px;
+.booking {
     position: relative;
 }
 
-.booking__content-title {
-    position: relative;
-
-    display: block;
-    font-family: 'Banny Bold Round';
-    font-size: 36px;
-    line-height: 1.33;   
-    text-transform: uppercase;
-    color: #000000;
-    margin: 0 0 45px 0;
-}
-
-.booking__content-title::after{
-    content: '';
-    position: absolute;
-    width: 60px;
-    height: 5.11px;
-    border-radius: 5px;
-    background: #E8C300;
-    margin: auto;
-    top: 90px;
-    left: 0;
-    bottom: 0;
-    right: 0;
-}
-
-.booking__content {
-    width: 50%;
-    position: relative;
-}
-
-.booking__content-wrapper{
+.booking__content-wrapper {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-
     text-align: center;
     min-width: 580px;
 }
 
-.booking__content-title {
-    position: relative;
-
-    display: block;
-    font-family: 'Banny Bold Round';
-    font-size: 36px;
-    line-height: 1.33;   
-    text-transform: uppercase;
-    color: #000000;
-    margin: 0 0 45px 0;
-}
-
-.main-form{
+.main-form {
     display: flex;
     justify-content: center;
 }
 
-.form__input{
+.form__input {
     width: 278px;
     height: 60px;
     margin: 5px;
     background: #E5E5E5;
     border-radius: 5px;
     border: none;
-
     font-size: 14px;
     line-height: 1.36;
-    /* text-indent: 20px; */
     padding: 0 20px;
     color: rgba(51, 51, 51, 0.5);
 }
 
-.confirm-button-btn{
+.confirm-button-btn {
     width: 566px;
     height: 60px;
     border-radius: 5px;
@@ -555,7 +429,6 @@ a.button-social-btn__link--last {
     color: #FFFFFF;
     text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
     cursor: pointer;
-
 }
 
 .confirm-button-btn:focus {
@@ -571,161 +444,25 @@ a.button-social-btn__link--last {
     transition: .8s;
 }
 
-.confirm-button{
+.confirm-button {
     text-align: center;
-}
-
-.booking__photo {
-    width: 50%;
-    text-align: center;
-    position: relative;
-}
-.booking-img {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-.schedule{
-    position: absolute;
-    bottom: 36px;
-    left: 50%;
-    transform: translate(-50%, -50%);
-
-    font-family: Open Sans;
-    font-size: 12px;
-    line-height: 12px; 
-    color: rgba(51, 51, 51, 0.5);
-    border-radius: 5px;
 }
 
 /* ----------------------___ SECTOIN SPECIALTIES START___--------------------- */
 
-.specialties{
-    height: 100vh;
-    background-repeat: no-repeat;
-    background-size: cover;
+.specialties {
     background-image: url("../img/specialties-bg.jpg");
-    position: relative;
-}
-
-.specialties__head{
-    position: absolute;
-    top: 50px;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    
-    font-family: Open Sans;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 12px;
-    line-height: 1.17;
-
-    letter-spacing: 0.5em;
-    color: #FFFFFF;
-    margin: 0 auto;
-}
-
-.specialties-container {
-    display: flex;
-    align-self: center;
-    min-height: 675px;
-}
-
-.specialties__content {
-    width: 50%;
-    position: relative;
-}
-
-.specialties__content-container{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-
-    text-align: center;
-    min-width: 580px;
-
-    color: #FFFFFF;
-}
-
-.specialties__content-title {
-    display: block;
-    font-family: 'Banny Bold Round';
-    font-size: 36px;
-    line-height: 1.33;   
-    text-transform: uppercase;
-    margin: 0 0 45px 0;
-
-    position: relative;
-}
-
-.specialties__content-title::after{
-    content: '';
-    position: absolute;
-    width: 60px;
-    height: 5.11px;
-    border-radius: 5px;
-    background: #E8C300;
-    margin: auto;
-    top: 90px;
-    left: 0;
-    bottom: 0;
-    right: 0;
-}
-
-.specialties__content-text-bold {
-    font-family: Open Sans;
-    font-weight: 700;
-    font-size: 18px;
-    line-height: 1.55;
-    
-}
-
-.specialties__content-text-bold p{
-    margin: 0 0 30px 0;
-}
-.specialties__content-text-normal {
-    font-family: Open Sans;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 1.71;
-}
-.specialties__photo {
-    width: 50%;
-    text-align: center;
-    position: relative;
-}
-.specialties-img {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-/* ----------------------___ SLIDER FOR SPECIALTIES___--------------------- */
-
-.slider__item{
-    height: 100vh;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
 }
 
 /* ----------------------___ SECTON MENU START___--------------------- */
 
-.rest-menu{
-   position: relative;
+.rest-menu {
+    position: relative;
 }
 
-.menu-container {
-}
-
-.rest-menu__description{
+.rest-menu__description {
     text-align: center;
     min-width: 580px;
-
     color: #000;
 }
 
@@ -737,32 +474,6 @@ a.button-social-btn__link--last {
     line-height: 1.55;
     margin: 0 auto;
     margin-top: 100px;
-    
-}
-
-.rest-menu__description-title {
-    display: block;
-    font-family: 'Banny Bold Round';
-    font-size: 36px;
-    line-height: 1.33;   
-    text-transform: uppercase;
-    margin: 0 0 45px 0;
-
-    position: relative;
-}
-
-.rest-menu__description-title::after{
-    content: '';
-    position: absolute;
-    width: 60px;
-    height: 5.11px;
-    border-radius: 5px;
-    background: #E8C300;
-    margin: auto;
-    top: 90px;
-    left: 0;
-    bottom: 0;
-    right: 0;
 }
 
 .rest-menu__nav {
@@ -774,15 +485,14 @@ a.button-social-btn__link--last {
     list-style: none;
 }
 
-.rest-menu__nav-list{
+.rest-menu__nav-list {
     margin: 0;
     padding: 0;
     display: flex;
     justify-content: center;
 }
 
-.rest-menu__nav-list li{
-
+.rest-menu__nav-item {
     position: relative;
     width: 120px;
     height: 50px;
@@ -790,13 +500,11 @@ a.button-social-btn__link--last {
     display: flex;
     align-items: center;
     justify-content: center;
-    
     font-family: Open Sans;
     font-weight: bold;
     font-size: 12px;
     line-height: 1.5;
     color: #333333;
-    
 }
 
 .rest-menu__nav-item a:hover {
@@ -808,7 +516,7 @@ a.button-social-btn__link--last {
     transition: .8s;
 }
 
-.rest-menu__nav-list li + li::after{
+.rest-menu__nav-list li+li::after {
     content: '';
     position: absolute;
     width: 50px;
@@ -821,50 +529,649 @@ a.button-social-btn__link--last {
 .rest-menu__list-container {
     display: flex;
     align-self: center;
-    /* min-height: 675px; */
+    margin-bottom: 62px;
 }
+
 .rest-menu__list-container-col {
     width: 33.33%;
     position: relative;
-
     font-family: 'Banny Bold Round';
     font-size: 18px;
     line-height: 1;
-    color: #333333;  
+    color: #333333;
 }
 
-.rest-menu-wrapper{
+.rest-menu-wrapper {
     margin-bottom: 38px;
 }
 
-.col_1{
-    /* background-color: aqua; */
-}
-
-.col_2{
-    /* background-color: bisque; */
-}
-
-.col_3{
-    /* background-color: coral; */
-}
-
-.rest-menu__item-cont{
+.rest-menu__item-cont {
     display: flex;
-    /* background-color: crimson; */
-    padding-left: 20%;
+    padding: 0 10%;
 }
 
-.rest-menu__item-price{
-    margin-left: 30px;
-    /* background-color: cornflowerblue; */
+.rest-menu__item-price {
+    margin-left: 0 10%;
+    text-align: center;
 }
 
-.rest-menu__item-description{
+.rest-menu__item-description {
     font-family: Open Sans;
     font-weight: 400;
     font-size: 12px;
     line-height: 1.29;
     color: rgba(67, 62, 62, 0.7);
-    padding-left: 20%;
+    padding: 0 10%;
 }
+
+/* ----------------------___ SECTON PRIVATE EVENTS START___--------------------- */
+
+.private {
+    background-image: url("../img/privat-bg.jpg");
+    background-size: cover;
+    position: relative;
+}
+
+.private__photo {
+    width: 50%;
+    text-align: center;
+    position: relative;
+}
+
+.private-img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.private-schedule {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.private-photo__container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.private-photo__items {
+    width: 25%;
+    text-align: center;
+    background-size: cover;
+    background-position: bottom;
+    height: 360px;
+}
+
+.private-photo__items_1 {
+    background-image: url("../img/PE_photo_1.jpg");
+}
+
+.private-photo__items_2 {
+    background-image: url("../img/PE_photo_2.jpg");
+}
+
+.private-photo__items_3 {
+    background-image: url("../img/PE_photo_3.jpg");
+}
+
+.private-photo__items_4 {
+    background-image: url("../img/PE_photo_4.jpg");
+}
+
+/* ----------------------___ SECTON CONTACTS START___--------------------- */
+
+.form-container {
+    margin-bottom: 100px;
+}
+
+.form-first-row {
+    display: flex;
+    justify-content: center;
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.form-first-row__item {
+    text-align: center;
+}
+
+.form-first-row__input {
+    width: 419px;
+    height: 60px;
+    margin: 5px;
+    background: #E5E5E5;
+    border-radius: 5px;
+    border: none;
+    font-size: 14px;
+    line-height: 1.36;
+    padding: 0 20px;
+    color: rgba(51, 51, 51, 0.5);
+}
+
+.textarea-container {
+    text-align: center;
+}
+
+.textarea {
+    width: 1280px;
+    min-height: 120px;
+    resize: none;
+    margin: 5px;
+    background: #E5E5E5;
+    border-radius: 5px;
+    border: none;
+    font-size: 14px;
+    line-height: 1.36;
+    padding: 20px;
+    color: rgba(51, 51, 51, 0.5);
+}
+
+.confirm-button-btn-contact {
+    width: 640px;
+    height: 60px;
+    border-radius: 5px;
+    border: none;
+    background: #E8C300;
+    margin-top: 5px;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 1.67;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+
+.confirm-button-btn:focus {
+    outline: none !important
+}
+
+.confirm-button-btn:hover {
+    transform: scale(1.005);
+    transition: .2s;
+}
+
+.confirm-button-btn:not(:hover) {
+    transition: .8s;
+}
+
+.contact__button-social-container {
+    display: flex;
+    justify-content: center;
+}
+
+.contact__button-social-items {
+    width: 640px;
+}
+
+.contact__social-item {
+    /* background-color: cadetblue; */
+    max-width: 640px;
+    display: flex;
+    justify-content: space-around;
+    font-family: Open Sans;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 1;
+    color: rgba(51, 51, 51, 0.5);
+}
+
+.contact__social-item-common {
+    align-self: center;
+    margin-left: 10px;
+}
+
+.contact__social-item-adress {
+    position: relative;
+}
+
+.contact__social-item-adress::before {
+    content: "";
+    background-image: url('../img/map.svg');
+    background-repeat: no-repeat;
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    left: -30px;
+    bottom: -7px;
+}
+
+.contact__social-item-tel {
+    position: relative;
+}
+
+.contact__social-item-tel::before {
+    content: "";
+    background-image: url('../img/untitled.svg');
+    background-repeat: no-repeat;
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    left: -30px;
+    bottom: -9px;
+}
+
+.contact__social-item-email {
+    position: relative;
+}
+
+.contact__social-item-email::before {
+    content: "";
+    background-image: url('../img/envelop.svg');
+    background-repeat: no-repeat;
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    left: -30px;
+    bottom: -12px;
+}
+
+/* ----------------------___ FOOTER___--------------------- */
+
+.footer {
+    flex: 0 0 auto;
+    min-height: 100px;
+    width: 100%;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+}
+
+.copiright {
+    align-self: center;
+    font-family: Open Sans;
+    font-size: 12px;
+    line-height: 1;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+/* ----------------------___ ADAPTIVE___--------------------- */
+
+@media (max-width: 1220px) {
+    .section-img {
+        width: calc(729px*0.75);
+        height: calc(575px*0.75);
+    }
+    .form__input {
+        width: 240px;
+    }
+    .confirm-button-btn {
+        width: 490px;
+    }
+    .rest-menu__item-cont {
+        font-size: 10px;
+    }
+    .private-img {
+        width: calc(730px*0.75);
+        height: calc(575px*0.75);
+    }
+    .form-first-row__input {
+        width: 326px;
+        height: 60px;
+    }
+    .textarea {
+        width: 1000px;
+        min-height: 120px;
+    }
+    .confirm-button-btn-contact {
+        width: 500px;
+        height: 60px;
+    }
+    .contact__button-social-items {
+        width: 500px;
+    }
+    .contact__social-item {
+        max-width: 640px;
+        font-size: 10px;
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 1100px) {
+    .hungry-title {
+        font-size: 80px;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+    .header-buttons {
+        margin-top: 80px;
+    }
+    .hungry-title::after {
+        top: 220px;
+    }
+    .section-container {
+        flex-wrap: wrap;
+        min-height: 300px;
+    }
+    .private-section__container {
+        min-height: 550px;
+    }
+    .content-text-bold p {
+        margin: 0 0 0 0;
+    }
+    .section__content {
+        width: 100%;
+    }
+    .section__photo {
+        width: 100%;
+    }
+    .section-img {
+        position: initial;
+        top: 0;
+        left: 0;
+        transform: translate(0, 0);
+    }
+    .scroll-down-btn {
+        bottom: 30px;
+    }
+    .section__content-container, .booking__content-wrapper {
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        position: initial;
+        transform: translate(0, 0);
+        text-align: center;
+        min-width: fit-content;
+        padding: 40px;
+    }
+    .booking__photo {
+        display: none;
+    }
+    .rest-menu-wrapper {
+        margin-bottom: 5px;
+    }
+    .schedule {
+        width: 100%;
+        text-align: center;
+        padding: 0 20px;
+    }
+    .rest-menu__item-cont {
+        font-size: 10px;
+    }
+    .rest-menu__item-description {
+        font-size: 6px;
+    }
+    .rest-menu__item-price {
+        margin-left: 20px;
+    }
+    .private-photo__container {
+        flex-direction: column;
+    }
+    .private-photo__items {
+        width: 100%;
+        min-height: 500px;
+        margin: 2px;
+    }
+    .form-first-row {
+        flex-direction: column;
+    }
+    .form-first-row__input {
+        width: 50%;
+        height: 60px;
+    }
+    .textarea {
+        width: 50%;
+        min-height: 120px;
+    }
+    .contact__button-social-container {
+        flex-direction: column-reverse;
+        align-items: center;
+        width: 50%;
+        margin: 0 auto;
+    }
+    .confirm-button-btn-contact {
+        width: 100%;
+        height: 60px;
+    }
+    .contact__button-social-items {
+        width: 80%;
+    }
+    .contact__social-item {
+        font-size: 10px;
+        flex-direction: column;
+    }
+    .contact__social-item-common {
+        margin: 12px 0;
+        text-align: center;
+    }
+}
+
+@media (max-width: 900px) {
+    .hungry-title {
+        font-size: 60px;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+    .rest-menu__list-container {
+        flex-direction: column;
+    }
+    .rest-menu__list-container-col {
+        width: 100%;
+        text-align: center;
+    }
+    .rest-menu__item-cont {
+        width: 100%;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+    }
+    .rest-menu__description-common {
+        margin-top: 10px;
+    }
+    .rest-menu__nav {
+        margin: 20px 0;
+    }
+    .rest-menu__item-description {
+        font-size: 6px;
+    }
+    .rest-menu__item-price {
+        margin-left: 20px;
+    }
+    .private-img {
+        width: calc(730px*0.5);
+        height: calc(575px*0.5);
+    }
+}
+
+@media (max-width: 800px) {
+    .hungry-title {
+        font-size: 60px;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+    .menu-item {
+        display: inline-block;
+        width: 100px;
+        height: 80px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .header::before {
+        top: 80px;
+    }
+    .menu-item-bamper {
+        display: none;
+    }
+    @media (max-width: 640px) {
+        .header__maincontent {
+            position: relative;
+        }
+        .header__maincontent--social {
+            position: absolute;
+            display: flex;
+            flex-direction: row;
+            top: 190px;
+            bottom: 0;
+            left: 0;
+            right: 0;
+        }
+        .header__maincontent--title {
+            margin-top: 170px;
+        }
+        .hungry-title::after {
+            top: 130px;
+        }
+        .button-social-btn__link {
+            margin: 20px;
+        }
+        .header__maincontent--social a+a {
+            padding-top: 0;
+        }
+        .header__maincontent--time {
+            top: 400px;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            transform: translate(-50%);
+            padding: 0;
+            writing-mode: horizontal-tb;
+            -webkit-transform: rotate(0deg);
+        }
+        .header-buttons {
+            margin-top: 100px;
+        }
+        .scroll-down-btn {
+            display: none;
+        }
+        .section__content-container {
+            padding: 5px 40px;
+        }
+        .section-img {
+            width: calc(729px*0.5);
+            height: calc(575px*0.5);
+        }
+        .booking__content-wrapper {
+            padding: 5px;
+        }
+        .form__input {
+            width: 200px;
+        }
+        .confirm-button-btn {
+            width: 410px;
+        }
+        .rest-menu__nav-list {
+            flex-wrap: wrap;
+        }
+        .rest-menu__nav-item {
+            position: relative;
+            width: 300px;
+            height: 30px;
+        }
+        .rest-menu__nav-list li+li::after {
+            display: none;
+        }
+        .rest-menu__description {
+            min-width: 300px;
+        }
+        .rest-menu__description-common {
+            width: 100%;
+            padding: 0 20px;
+        }
+        .rest-menu__list-container {
+            margin-bottom: 10px;
+        }
+        .private__photo {
+            width: 100%;
+        }
+        .private-img {
+            width: calc(730px*0.3);
+            height: calc(575px*0.3);
+        }
+        .private-schedule {
+            bottom: 10px;
+            left: 50%;
+        }
+        .form-first-row__input {
+            width: 80%;
+            height: 40px;
+        }
+        .textarea {
+            width: 80%;
+            min-height: 90px;
+        }
+    }
+    @media (max-width: 520px) {
+        .menu-list {
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .menu-item {
+            width: 200px;
+        }
+        .header__maincontent--title {
+            height: 250px;
+            margin-top: 20px;
+        }
+        .section-img {
+            width: calc(729px*0.4);
+            height: calc(575px*0.4);
+        }
+        .about__content-container {
+            min-width: 350px;
+        }
+        .about__content-title {
+            font-size: 30px;
+            top: 20px;
+        }
+        .about__content-title::after {
+            top: 60px;
+        }
+        .about__content-text-bold {
+            font-size: 14px;
+        }
+        .about__content-text-normal {
+            font-size: 12px;
+        }
+    }
+    @media (max-width: 460px) {
+        .menu-item {
+            width: 200px;
+            height: 70px;
+        }
+        .menu-item a {
+            font-size: 5px;
+        }
+        .header::before {
+            display: none;
+        }
+        .about__content-container {
+            min-width: 320px;
+        }
+        .header-btn {
+            min-width: 150px;
+            min-height: 60px;
+        }
+        .form__input {
+            width: 160px;
+            height: 40px;
+            font-size: 10px;
+        }
+        .confirm-button-btn {
+            width: 330px;
+            height: 40px;
+            font-size: 10px;
+        }
+    }
+    @media (max-width: 400px) {
+        .menu-item {
+            width: 140px;
+            height: 50px;
+        }
+        .header-btn {
+            min-width: 120px;
+            min-height: 60px;
+        }
+        .section-title {
+            font-size: 30px;
+        }
+        .form__input {
+            width: 140px;
+            height: 40px;
+            font-size: 10px;
+        }
+        .confirm-button-btn {
+            width: 290px;
+            height: 40px;
+            font-size: 10px;
+        }
+    }

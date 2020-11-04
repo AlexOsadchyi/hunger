@@ -16,20 +16,22 @@
 </head>
 
 <body>
+
     <header class="header">
-        <div class="container header-container">
+        <div class="header-container">
             <nav class="menu">
                 <ul class="menu-list">
                     <li class="menu-item"><a href="#">HOME</a></li>
-                    <li class="menu-item"><a href="#">ABOUT</a></li>
-                    <li class="menu-item"><a href="#">TEAM</a></li>
-                    <li class="menu-item"><a href="#">BOOKING</a></li>
-                    <li class="menu-item" width="232px"></li>
-                    <!-- Цей айтем щоб зробити відстань між двома частинами меню в 220px -->
-                    <li class="menu-item"><a href="#">MENU</a></li>
-                    <li class="menu-item"><a href="#">GALERIE</a></li>
-                    <li class="menu-item"><a href="#">EVENTS</a></li>
-                    <li class="menu-item"><a href="#">CONTACT</a></li>
+                    <li class="menu-item"><a href="#about">ABOUT</a></li>
+                    <li class="menu-item"><a href="#team">TEAM</a></li>
+                    <li class="menu-item"><a href="#book_table">BOOKING</a></li>
+
+                    <li class="menu-item menu-item-bamper" width="232px"></li>
+                  
+                    <li class="menu-item"><a href="#menu">MENU</a></li>
+                    <li class="menu-item"><a href="#events">GALERIE</a></li>
+                    <li class="menu-item"><a href="#events">EVENTS</a></li>
+                    <li class="menu-item"><a href="#contact">CONTACT</a></li>
                 </ul>
             </nav>
 
@@ -53,11 +55,11 @@
 
                 <div class="header__maincontent--social">
                     <a class="button-social-btn__link" href="#"><img class="button-social-btn__img"
-                            src="./img/facebook.svg" alt="facebook link"></a>
+                            src="./img/1.4_facebook.svg" alt="facebook link"></a>
                     <a class="button-social-btn__link" href="#"><img class="button-social-btn__img"
-                            src="./img/twitter.svg" alt="twitter link"></a>
-                    <a class="button-social-btn__link--last" href="#"><img class="button-social-btn__img"
-                            src="./img/instagram.svg" alt="instagram link"></a>
+                            src="./img/1.2_twitter.svg" alt="twitter link"></a>
+                    <a class="button-social-btn__link" href="#"><img class="button-social-btn__img"
+                            src="./img/1.3_instagram.svg" alt="instagram link"></a>
                 </div>
 
             </div>
@@ -68,24 +70,22 @@
 
     </header>
 
-    <section class="about">
+    
+  
+    <section class="about" id="about"> 
 
-        <div class="about-container">
+        <div class="section-container">
 
-            <div class="about__content">
+            <div class="section__content">
 
-                <div class="about__content-container">
-                    <div class="about__content-text-bold">
-                        <span class="about__content-title">ABOUT US</span>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis at velit maximus, molestie est
-                            a, tempor magna.</p>
+                <div class="section__content-container">
+                    <div class="content-text-bold">
+                        <span class="section-title">ABOUT US</span>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis at velit maximus, molestie est a, tempor magna.</p>
                     </div>
 
-                    <div class="about__content-text-normal">Integer ullamcorper neque eu
-                        purus euismod, ac faucibus mauris posuere. Morbi non ultrices ligula. Sed dictum, enim sed
-                        ullamcorper feugiat, dui odio vehicula eros, a sollicitudin lorem quam nec sem. Mauris tincidunt
-                        feugiat diam convallis
-                        pharetra. Nulla facilisis semper laoreet.
+                    <div class="content-text-normal">Integer ullamcorper neque eu
+                        purus euismod, ac faucibus mauris posuere. Morbi non ultrices ligula. Sed dictum, enim sed ullamcorper feugiat, dui odio vehicula eros, a sollicitudin lorem quam nec sem. Mauris tincidunt feugiat diam convallis pharetra. Nulla facilisis semper laoreet.
                     </div>
 
                 </div>
@@ -93,36 +93,32 @@
 
             </div>
 
-            <div class="about__photo">
-                <img class="about-img" src="./img/Group.png" alt="about-img">
+            <div class="section__photo">
+                <img class="section-img" src="./img/2_About.png" alt="about-img">
             </div>
         </div>
 
     </section>
+ 
+    <section class="our-team section-bg" id="team">
 
-    <section class="our-team">
+        <div class="section-container">
+            <div class="section__head">OUR TEAM</div>
 
-        <div class="our-team-container">
-            <div class="our-team__head">OUR TEAM</div>
-
-            <div class="our-team__photo">
-                <img class="our-team-img" src="./img/Group_our-team.png" alt="our-team-img">
+            <div class="section__photo">
+                <img class="section-img" src="./img/Group_our-team.png" alt="our-team-img">
             </div>
 
-            <div class="our-team__content">
+            <div class="section__content">
 
-                <div class="our-team__content-container">
-                    <div class="our-team__content-text-bold">
-                        <span class="our-team__content-title">MASTER CHEF</span>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis at velit maximus, molestie est
-                            a, tempor magna.</p>
+                <div class="section__content-container section-title-white">
+                    <div class="content-text-bold">
+                        <span class="section-title section-title-white">MASTER CHEF</span>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis at velit maximus, molestie est a, tempor magna.</p>
                     </div>
 
-                    <div class="our-team__content-text-normal">Integer ullamcorper neque eu
-                        purus euismod, ac faucibus mauris posuere. Morbi non ultrices ligula. Sed dictum, enim sed
-                        ullamcorper feugiat, dui odio vehicula eros, a sollicitudin lorem quam nec sem. Mauris tincidunt
-                        feugiat diam convallis
-                        pharetra. Nulla facilisis semper laoreet.
+                    <div class="content-text-normal">Integer ullamcorper neque eu
+                        purus euismod, ac faucibus mauris posuere. Morbi non ultrices ligula. Sed dictum, enim sed ullamcorper feugiat, dui odio vehicula eros, a sollicitudin lorem quam nec sem. Mauris tincidunt feugiat diam convallis pharetra. Nulla facilisis semper laoreet.
                     </div>
 
                 </div>
@@ -133,14 +129,14 @@
 
     </section>
 
-    <section class="booking">
+    <section class="booking" id="book_table">
 
-        <div class="booking-container">
+        <div class="section-container">
 
 
-            <div class="booking__content">
+            <div class="section__content">
                 <div class="booking__content-wrapper">
-                    <div class="booking__content-title">BOOK A TABLE</div>
+                    <div class="section-title">BOOK A TABLE</div>
                     <div class="form-container">
                         <form action="#">
                             <div class="main-form">
@@ -190,7 +186,7 @@
                                 </div>
                             </div>
                             <div class="confirm-button">
-                                <button class="confirm-button-btn" type="submit">BOOK NOW</button>
+                                <button class="confirm-button-btn" type="submit" tabindex="7">BOOK NOW</button>
                             </div>
                         </form>
                     </div>
@@ -199,8 +195,8 @@
 
             </div>
 
-            <div class="booking__photo">
-                <img class="booking-img" src="./img/booking.png" alt="booking-img">
+            <div class="section__photo booking__photo">
+                <img class="section-img" src="./img/booking.png" alt="booking-img">
             </div>
 
             <div class="schedule">
@@ -212,33 +208,24 @@
 
     </section>
 
-    <section class="specialties">
+    <section class="specialties section-bg">
 
-        <!-- <div class="slider-specialties">
-            <div class="slider">
-                <div class="slider__item" style="background-image: url(img/tesla_1.jpg);"></div>
-                <div class="slider__item" style="background-image: url(img/Tesla_2.jpg);"></div>
-                <div class="slider__item" style="background-image: url(img/Tesla_3.jpg);"></div>
-            </div>
-        </div> -->
+        <div class="section-container">
+            <div class="section__head">SPECIALTIES</div>
 
-        <div class="specialties-container">
-            <div class="specialties__head">SPECIALTIES</div>
-
-            <div class="specialties__photo">
-                <img class="specialties-img" src="./img/Group_specialties.png" alt="our-team-img">
+            <div class="section__photo">
+                <img class="section-img" src="./img/Group_specialties.png" alt="scecialties image">
             </div>
 
-            <div class="specialties__content">
+            <div class="section__content">
 
-                <div class="specialties__content-container">
-                    <div class="specialties__content-text-bold">
-                        <span class="specialties__content-title">chocolate pancakes</span>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis at velit maximus, molestie est
-                            a, tempor magna.</p>
+                <div class="section__content-container section-title-white">
+                    <div class="content-text-bold">
+                        <span class="section-title section-title-white">chocolate pancakes</span>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis at velit maximus, molestie est a, tempor magna.</p>
                     </div>
 
-                    <div class="specialties__content-text-normal">Integer ullamcorper neque eu
+                    <div class="content-text-normal">Integer ullamcorper neque eu
                         purus euismod, ac faucibus mauris posuere. Morbi non ultrices ligula. Sed dictum, enim sed
                         ullamcorper feugiat, dui odio vehicula eros, a sollicitudin lorem quam nec sem. Mauris tincidunt
                         feugiat diam convallis
@@ -252,13 +239,15 @@
         </div>
     </section>
 
-    <section class="rest-menu">
+    
+
+    <section class="rest-menu" id="menu">
 
         <div class="menu-container">
 
             <div class="rest-menu__description">
                 <div class="rest-menu__description-common">
-                    <span class="rest-menu__description-title">DELICIOUS MENU</span>
+                    <span class="section-title">DELICIOUS MENU</span>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis at velit maximus, molestie est a, tempor magna.</p>
                 </div>
 
@@ -280,7 +269,7 @@
 
                     <div class="rest-menu-wrapper">
                         <div class="rest-menu__item-cont">
-                            <div class="rest-menu__item-text">PIZZA QUATRO STAGIONI  . . . .</div>
+                            <div class="rest-menu__item-text">PIZZA QUATRO STAGIONI . . . .</div>
                             <div class="rest-menu__item-price">55,68 USD</div>
                         </div>
                         <div class="rest-menu__item-description">
@@ -290,7 +279,7 @@
 
                     <div class="rest-menu-wrapper">
                         <div class="rest-menu__item-cont">
-                            <div class="rest-menu__item-text">PIZZA QUATRO STAGIONI  . . . .</div>
+                            <div class="rest-menu__item-text">PIZZA QUATRO STAGIONI . . . .</div>
                             <div class="rest-menu__item-price">55,68 USD</div>
                         </div>
                         <div class="rest-menu__item-description">
@@ -299,7 +288,7 @@
                     </div>
                     <div class="rest-menu-wrapper">
                         <div class="rest-menu__item-cont">
-                            <div class="rest-menu__item-text">PIZZA QUATRO STAGIONI  . . . .</div>
+                            <div class="rest-menu__item-text">PIZZA QUATRO STAGIONI . . . .</div>
                             <div class="rest-menu__item-price">55,68 USD</div>
                         </div>
                         <div class="rest-menu__item-description">
@@ -308,7 +297,7 @@
                     </div>
                     <div class="rest-menu-wrapper">
                         <div class="rest-menu__item-cont">
-                            <div class="rest-menu__item-text">PIZZA QUATRO STAGIONI  . . . .</div>
+                            <div class="rest-menu__item-text">PIZZA QUATRO STAGIONI . . . .</div>
                             <div class="rest-menu__item-price">55,68 USD</div>
                         </div>
                         <div class="rest-menu__item-description">
@@ -317,7 +306,7 @@
                     </div>
                     <div class="rest-menu-wrapper">
                         <div class="rest-menu__item-cont">
-                            <div class="rest-menu__item-text">PIZZA QUATRO STAGIONI  . . . .</div>
+                            <div class="rest-menu__item-text">PIZZA QUATRO STAGIONI . . . .</div>
                             <div class="rest-menu__item-price">55,68 USD</div>
                         </div>
                         <div class="rest-menu__item-description">
@@ -326,7 +315,7 @@
                     </div>
                     <div class="rest-menu-wrapper">
                         <div class="rest-menu__item-cont">
-                            <div class="rest-menu__item-text">PIZZA QUATRO STAGIONI  . . . .</div>
+                            <div class="rest-menu__item-text">PIZZA QUATRO STAGIONI . . . .</div>
                             <div class="rest-menu__item-price">55,68 USD</div>
                         </div>
                         <div class="rest-menu__item-description">
@@ -335,7 +324,7 @@
                     </div>
                     <div class="rest-menu-wrapper">
                         <div class="rest-menu__item-cont">
-                            <div class="rest-menu__item-text">PIZZA QUATRO STAGIONI  . . . .</div>
+                            <div class="rest-menu__item-text">PIZZA QUATRO STAGIONI . . . .</div>
                             <div class="rest-menu__item-price">55,68 USD</div>
                         </div>
                         <div class="rest-menu__item-description">
@@ -348,7 +337,7 @@
 
                     <div class="rest-menu-wrapper">
                         <div class="rest-menu__item-cont">
-                            <div class="rest-menu__item-text">PIZZA QUATRO STAGIONI  . . . .</div>
+                            <div class="rest-menu__item-text">PIZZA QUATRO STAGIONI . . . .</div>
                             <div class="rest-menu__item-price">55,68 USD</div>
                         </div>
                         <div class="rest-menu__item-description">
@@ -358,7 +347,7 @@
 
                     <div class="rest-menu-wrapper">
                         <div class="rest-menu__item-cont">
-                            <div class="rest-menu__item-text">PIZZA QUATRO STAGIONI  . . . .</div>
+                            <div class="rest-menu__item-text">PIZZA QUATRO STAGIONI . . . .</div>
                             <div class="rest-menu__item-price">55,68 USD</div>
                         </div>
                         <div class="rest-menu__item-description">
@@ -367,7 +356,7 @@
                     </div>
                     <div class="rest-menu-wrapper">
                         <div class="rest-menu__item-cont">
-                            <div class="rest-menu__item-text">PIZZA QUATRO STAGIONI  . . . .</div>
+                            <div class="rest-menu__item-text">PIZZA QUATRO STAGIONI . . . .</div>
                             <div class="rest-menu__item-price">55,68 USD</div>
                         </div>
                         <div class="rest-menu__item-description">
@@ -376,7 +365,7 @@
                     </div>
                     <div class="rest-menu-wrapper">
                         <div class="rest-menu__item-cont">
-                            <div class="rest-menu__item-text">PIZZA QUATRO STAGIONI  . . . .</div>
+                            <div class="rest-menu__item-text">PIZZA QUATRO STAGIONI . . . .</div>
                             <div class="rest-menu__item-price">55,68 USD</div>
                         </div>
                         <div class="rest-menu__item-description">
@@ -385,7 +374,7 @@
                     </div>
                     <div class="rest-menu-wrapper">
                         <div class="rest-menu__item-cont">
-                            <div class="rest-menu__item-text">PIZZA QUATRO STAGIONI  . . . .</div>
+                            <div class="rest-menu__item-text">PIZZA QUATRO STAGIONI . . . .</div>
                             <div class="rest-menu__item-price">55,68 USD</div>
                         </div>
                         <div class="rest-menu__item-description">
@@ -394,7 +383,7 @@
                     </div>
                     <div class="rest-menu-wrapper">
                         <div class="rest-menu__item-cont">
-                            <div class="rest-menu__item-text">PIZZA QUATRO STAGIONI  . . . .</div>
+                            <div class="rest-menu__item-text">PIZZA QUATRO STAGIONI . . . .</div>
                             <div class="rest-menu__item-price">55,68 USD</div>
                         </div>
                         <div class="rest-menu__item-description">
@@ -403,7 +392,7 @@
                     </div>
                     <div class="rest-menu-wrapper">
                         <div class="rest-menu__item-cont">
-                            <div class="rest-menu__item-text">PIZZA QUATRO STAGIONI  . . . .</div>
+                            <div class="rest-menu__item-text">PIZZA QUATRO STAGIONI . . . .</div>
                             <div class="rest-menu__item-price">55,68 USD</div>
                         </div>
                         <div class="rest-menu__item-description">
@@ -416,7 +405,7 @@
 
                     <div class="rest-menu-wrapper">
                         <div class="rest-menu__item-cont">
-                            <div class="rest-menu__item-text">PIZZA QUATRO STAGIONI  . . . .</div>
+                            <div class="rest-menu__item-text">PIZZA QUATRO STAGIONI . . . .</div>
                             <div class="rest-menu__item-price">55,68 USD</div>
                         </div>
                         <div class="rest-menu__item-description">
@@ -426,7 +415,7 @@
 
                     <div class="rest-menu-wrapper">
                         <div class="rest-menu__item-cont">
-                            <div class="rest-menu__item-text">PIZZA QUATRO STAGIONI  . . . .</div>
+                            <div class="rest-menu__item-text">PIZZA QUATRO STAGIONI . . . .</div>
                             <div class="rest-menu__item-price">55,68 USD</div>
                         </div>
                         <div class="rest-menu__item-description">
@@ -435,7 +424,7 @@
                     </div>
                     <div class="rest-menu-wrapper">
                         <div class="rest-menu__item-cont">
-                            <div class="rest-menu__item-text">PIZZA QUATRO STAGIONI  . . . .</div>
+                            <div class="rest-menu__item-text">PIZZA QUATRO STAGIONI . . . .</div>
                             <div class="rest-menu__item-price">55,68 USD</div>
                         </div>
                         <div class="rest-menu__item-description">
@@ -444,7 +433,7 @@
                     </div>
                     <div class="rest-menu-wrapper">
                         <div class="rest-menu__item-cont">
-                            <div class="rest-menu__item-text">PIZZA QUATRO STAGIONI  . . . .</div>
+                            <div class="rest-menu__item-text">PIZZA QUATRO STAGIONI . . . .</div>
                             <div class="rest-menu__item-price">55,68 USD</div>
                         </div>
                         <div class="rest-menu__item-description">
@@ -453,7 +442,7 @@
                     </div>
                     <div class="rest-menu-wrapper">
                         <div class="rest-menu__item-cont">
-                            <div class="rest-menu__item-text">PIZZA QUATRO STAGIONI  . . . .</div>
+                            <div class="rest-menu__item-text">PIZZA QUATRO STAGIONI . . . .</div>
                             <div class="rest-menu__item-price">55,68 USD</div>
                         </div>
                         <div class="rest-menu__item-description">
@@ -462,7 +451,7 @@
                     </div>
                     <div class="rest-menu-wrapper">
                         <div class="rest-menu__item-cont">
-                            <div class="rest-menu__item-text">PIZZA QUATRO STAGIONI  . . . .</div>
+                            <div class="rest-menu__item-text">PIZZA QUATRO STAGIONI . . . .</div>
                             <div class="rest-menu__item-price">55,68 USD</div>
                         </div>
                         <div class="rest-menu__item-description">
@@ -471,7 +460,7 @@
                     </div>
                     <div class="rest-menu-wrapper">
                         <div class="rest-menu__item-cont">
-                            <div class="rest-menu__item-text">PIZZA QUATRO STAGIONI  . . . .</div>
+                            <div class="rest-menu__item-text">PIZZA QUATRO STAGIONI . . . .</div>
                             <div class="rest-menu__item-price">55,68 USD</div>
                         </div>
                         <div class="rest-menu__item-description">
@@ -482,13 +471,119 @@
                 </div>
             </div>
 
-
-
-
-
         </div>
     </section>
 
+    <section class="private" id="events">
+
+        <div class="section-container private-section__container">
+            <div class="section__head">PRIVATE EVENTS</div>
+
+            <div class="private__photo">
+                <img class="private-img" src="./img/private_weddings.png" alt="private events-img1">
+            </div>
+
+            <div class="private__photo">
+                <img class="private-img" src="./img/private_corporate.png" alt="private events-img2">
+            </div>
+
+            <div class="private-schedule schedule">
+                For private events please call: <strong>+40 729 131 637/+40 726 458 782</strong> or use the contact form.
+            </div>
+
+        </div>
+
+    </section>
+     
+
+    <section class="hunger_photos">
+
+        <div class="private-photo__container">
+            <div class="private-photo__items private-photo__items_1"></div>
+            <div class="private-photo__items private-photo__items_2"></div>
+            <div class="private-photo__items private-photo__items_3"></div>
+            <div class="private-photo__items private-photo__items_4"></div>
+        </div>
+
+    </section>
+
+ 
+
+    <section class="contact" id="contact">
+
+        <div class="menu-container">
+
+            <div class="rest-menu__description">
+                <div class="rest-menu__description-common">
+                    <span class="section-title">CONTACT</span>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis at velit maximus, molestie est a,
+                        tempor magna.</p>
+                </div>
+
+            </div>
+
+            <div class="form-container">
+                <form action="#">
+                    <div class="form-first-row">
+                        <div class="form-first-row__item">
+
+                            <input class="form-first-row__input" placeholder="Name" type="text" tabindex="8">
+                        </div>
+
+                        <div class="form-first-row__item">
+
+                            <input class="form-first-row__input" placeholder="Email" type="tel" tabindex="9">
+                        </div>
+
+                        <div class="form-first-row__item">
+
+                            <input class="form-first-row__input" placeholder="Phone" type="text" tabindex="10">
+
+                        </div>
+                    </div>
+
+                    <div class="textarea-container">
+                        <textarea class="textarea" placeholder="Message" name="" id="" cols="30" rows="10"
+                            tabindex="11"></textarea>
+                    </div>
+
+                    <div class="contact__button-social-container">
+
+                        <div class="contact__button-social-items contact__social-item">
+                            <div class="contact__social-item-adress contact__social-item-common">5th London Boulevard, U.K.</div>
+                            <div class="contact__social-item-tel contact__social-item-common">+40 729 131 637/+40 726 458 782</div>
+                            <div class="contact__social-item-email contact__social-item-common">office@mindblister.com
+                            </div>
+
+
+                        </div>
+
+                        <div class="contact__button-social-items contact__button-item">
+                            <button class="confirm-button-btn-contact" type="submit" tabindex="12">SEND MESSAGE</button>
+                        </div>
+                    </div>
+
+
+                </form>
+            </div>
+
+        </div>
+    </section>
+  
+    <section class="map">
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d2443.8571971842284!2d30.499703174926143!3d50.46342876407351!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1suk!2sua!4v1604222819722!5m2!1suk!2sua"
+            width="100%" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"
+            tabindex="0"></iframe>
+    </section>
+
+    <footer class="footer">
+
+        <div class="copiright">
+            © Copyright <strong>Mindblister</strong> 2019
+        </div>
+
+    </footer>
 
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
